@@ -15,6 +15,33 @@
  <script>
      
      $(document).ready(function(){
+
+      $('#search').keyup(function(){
+         
+         var search = $('#search').val();
+             
+             
+        $.ajax({
+        
+        url:'search.php',
+        data:{search:search},
+        type: 'POST',
+        success:function(data){
+        
+            if(!data.error) {
+            
+            $('#result').html(data);
+            
+            }
+            
+        
+        }
+     
+        
+        });
+             
+      
+         });
          
       setInterval(function(){
       
@@ -72,7 +99,7 @@
     if(data=='invalid')
     {
      // invalid file format.
-     $("#err").html("Invalid File !").fadeIn();
+     $("#err").html("Helytelen File !").fadeIn();
     }
     else
     {
@@ -103,7 +130,15 @@
     
     <div class="row">
        <div class="col-md-6 mx-auto p-3">
-
+       <div class="row">
+      <h2>Válasszon halfajok közül:</h2>
+      <input class='form-control' type="text" name='search' id='search' placeholder='Search our fishbase'>
+ 
+      <br>
+      <br>
+      <h2 class="bg-success" id="result">    
+      </h2>
+    </div>
         
        
        <form method="post" id="add-fish-form" class="col-md-6 mx-auto" action="add.php" enctype="multipart/form-data">

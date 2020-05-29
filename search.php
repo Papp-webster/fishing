@@ -3,18 +3,14 @@
 include("db.php");
 
 
-//if($connection) {
-//
-//echo "Yes it is";
-//
-//}
+
 
 $search = $_POST['search'];
 
 
 if(!empty($search)) {
 
-$query = "SELECT * FROM fogasok WHERE title LIKE '$search%' ";
+$query = "SELECT * FROM fogasok WHERE hal_fajta LIKE '$search%' ";
 $search_query = mysqli_query($connect,$query);
 $count = mysqli_num_rows($search_query);    
 
@@ -30,7 +26,7 @@ $count = mysqli_num_rows($search_query);
     
     if($count <= 0) {
     
-     echo "Sorry we don't have that fish available";
+     echo "Sajnáljuk jelenleg nincs ilyen halfajunk!";
    
     
     } else {
@@ -39,15 +35,15 @@ $count = mysqli_num_rows($search_query);
     
      while($row = mysqli_fetch_array($search_query)) {
     
-        $brand = $row['title'];
-        
+        $fishrace = $row['hal_fajta'];
+        $fish_weight = $row['hal_sulya'];
         ?>
         
         <ul class='list-unstyled'>
             
         <?php
             
-            echo "<li>{$brand} in stock</li>";
+            echo "<li>{$fishrace} talált az adatbázisban ennyi kilóban {$fish_weight}!</li>";
             
             
             
@@ -62,36 +58,12 @@ $count = mysqli_num_rows($search_query);
     
   <?php  }
     
-    
-    
-    
+ 
     
     }
     
-   
-    
-
-
-
-
-
-
-
+ 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
