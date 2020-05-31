@@ -136,7 +136,7 @@
  
       <br>
       <br>
-      <h2 class="bg-success" id="result">    
+      <h2 class="result" id="result">    
       </h2>
     </div>
         
