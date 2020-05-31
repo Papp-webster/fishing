@@ -34,7 +34,7 @@ $count = mysqli_num_rows($search_query);
     
     
      while($row = mysqli_fetch_array($search_query)) {
-    
+        $fishImg = $row['img_fish'];
         $fishrace = $row['hal_fajta'];
         $fish_weight = $row['hal_sulya'];
         ?>
@@ -43,7 +43,15 @@ $count = mysqli_num_rows($search_query);
             
         <?php
             
-            echo "<li>{$fishrace} talált az adatbázisban ennyi kilóban {$fish_weight}!</li>";
+            echo "<div class='container'>
+       <div class='card' style='width:400px'>
+    <img src='{$fishImg}'' a style='width:100%'>
+    <div class='card-body'>
+      <h4 class='card-title'>{$fishrace}</h4>
+      <p class='card-text'>A hal súlya: {$fish_weight} Kg</p>
+      </div>
+  </div>
+</div>";
             
             
             
