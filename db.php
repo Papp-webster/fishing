@@ -2,7 +2,7 @@
 
 ob_start();
 
-$connect = mysqli_connect('localhost', 'root', '','konyv');
+$connect = mysqli_connect('localhost', 'root', '','fishdata');
 $query = "SET NAMES utf8";
 mysqli_query($connect,$query);
 
