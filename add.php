@@ -11,11 +11,11 @@ if(isset($_POST['water_name'])) {
   $post_image = $_FILES['image']['name'];
   $post_image_temp = $_FILES['image']['tmp_name'];
   $imageFileType = strtolower(pathinfo($location,PATHINFO_EXTENSION));
-  // Convert to base64 
+ 
   $image_base64 = base64_encode(file_get_contents($post_image_temp) );
   $image = 'data:image/'.$imageFileType.';base64,'.$image_base64;
   
-   // Upload file
+   
    move_uploaded_file($post_image_temp, "$location/$post_image");
   
     

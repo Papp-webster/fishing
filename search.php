@@ -10,7 +10,7 @@ $search = $_POST['search'];
 
 if(!empty($search)) {
 
-$query = "SELECT * FROM fogasok WHERE hal_fajta LIKE '$search%' ";
+$query = "SELECT * FROM fogasok WHERE hal_fajta LIKE '%$search%' ";
 $search_query = mysqli_query($connect,$query);
 $count = mysqli_num_rows($search_query);    
 
@@ -43,28 +43,21 @@ $count = mysqli_num_rows($search_query);
             
         <?php
             
-            echo "<div class='container'>
-       <div class='card' style='width:400px'>
-    <img src='{$fishImg}'' a style='width:100%'>
-    <div class='card-body'>
-      <h4 class='card-title'>{$fishrace}</h4>
-      <p class='card-text'>A hal súlya: {$fish_weight} Kg</p>
-      </div>
-  </div>
-</div>";
-            
-            
-            
+        echo "<div class='container'>
+          <div class='card' style='width:400px'>
+             <img src='{$fishImg}'' a style='width:100%'>
+          <div class='card-body'>
+              <h4 class='card-title'>{$fishrace}</h4>
+            <p class='card-text'>A hal súlya: {$fish_weight} Kg</p>
+              </div>
+          </div>
+        </div>";
+       
             
           ?>  
         </ul>
         
-        
-        
-    
-    
-    
-  <?php  }
+<?php  }
     
  
     
