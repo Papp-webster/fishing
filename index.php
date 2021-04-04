@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="hu">
+<?php 
 
-<head>
-  <meta charset="UTF-8">
-  <title>Horgászkönyv</title>
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  
+include('includes/head.php');
 
-</head>
+?>
 
 <body>
 
@@ -207,9 +200,9 @@
 
     </div>
   </div>
-  <script src='assets/js/img_script.js'></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-
+<?php  
+include('includes/scripts.php');
+?>
 
 </body>
 
