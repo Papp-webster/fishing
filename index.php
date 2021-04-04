@@ -4,16 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Horgászkönyv</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
 
 </head>
 
 <body>
 
-  <ul>
+  
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-12 mx-auto p-3">
+      <ul>
     <script>
       $(document).ready(function () {
 
@@ -81,8 +87,6 @@
 
 
         // ajax upload      
-
-
         $("#add-fish-form").on('submit', (function (e) {
           e.preventDefault();
           $.ajax({
@@ -120,11 +124,6 @@
   </ul>
 
 
-  <div class="container">
-
-
-    <div class="row">
-      <div class="col-md-12 mx-auto p-3">
         <div class="row">
           <h2>Válasszon halfajok közül:</h2>
           <input class='form-control' type="text" name='search' id='search' placeholder='Keressen a halfajok közül..'>
@@ -209,6 +208,7 @@
     </div>
   </div>
   <script src='assets/js/img_script.js'></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 
 
 </body>
