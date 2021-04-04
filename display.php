@@ -26,7 +26,7 @@ include("db.php");
             echo "<td><img src='$fish_img' width='150' alt='kep'/></td>";
             echo "<td>{$water_name}</td>";
             echo "<td>{$fish_name}</td>";
-            echo "<td>{$fish_weight}</td>";
+            echo "<td>{$fish_weight} <span>kg</span></td>";
             echo "<td>{$date}</td>";
             
 

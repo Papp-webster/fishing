@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="UTF-8">
@@ -93,7 +93,7 @@
             cache: false,
             processData: false,
             beforeSend: function () {
-              //$("#preview").fadeOut();
+              $("#preview").fadeOut();
               $("#err").fadeOut();
             },
             success: function (data) {
@@ -120,11 +120,11 @@
   </ul>
 
 
-  <div id="container">
+  <div class="container">
 
 
     <div class="row">
-      <div class="col-md-6 mx-auto p-3">
+      <div class="col-md-12 mx-auto p-3">
         <div class="row">
           <h2>Válasszon halfajok közül:</h2>
           <input class='form-control' type="text" name='search' id='search' placeholder='Keressen a halfajok közül..'>
@@ -136,23 +136,18 @@
         </div>
 
 
-        <form method="post" id="add-fish-form" class="col-md-6 mx-auto" action="add.php" enctype="multipart/form-data">
+        <form method="post" id="add-fish-form" class="col-md-8 mx-auto" action="add.php" enctype="multipart/form-data">
 
           <div class="form-group">
             <label for="post_img">Kép hozzáadása:</label>
             <div class="box">
-              <div class="image-preview"></div>
+              <img id="img-pre" src="#" alt="Saját kép"></img>
               <div class="upload-options">
                 <label>
-                  <input type="file" class="form-control-file" name="image" />
+                  <input type="file" class="form-control-file" id="imgInp" name="image" />
                 </label>
               </div>
             </div>
-
-            <div id="err"></div>
-
-
-
           </div>
           <div class="form-group">
 
@@ -191,7 +186,7 @@
 
     <div class="row">
 
-      <div class="col-md-6 mx-auto w-50 p-3">
+      <div class="col-md-12 mx-auto w-50 p-3">
 
         <table class="table table-bordered table-hover">
 
@@ -213,9 +208,6 @@
 
     </div>
   </div>
-  <script
-    src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'>
-  </script>
   <script src='assets/js/img_script.js'></script>
 
 

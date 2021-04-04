@@ -3,8 +3,7 @@
 
 .box {
     display: block;
-    min-width: 300px;
-    height: 300px;
+    min-width: 500px;
     margin: 10px;
     background-color: white;
     border-radius: 5px;
@@ -76,8 +75,8 @@
     color: lightgray;
   }
   
-  .image-preview {
-    height: 225px;
+  #img-pre {
+    height: 400px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -87,24 +86,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .image-preview::after {
-    content: "photo_size_select_actual";
-    font-family: 'Material Icons';
-    position: relative;
-    font-size: 4.5em;
-    color: #e6e6e6;
-    top: calc(50% - 3rem);
-    left: calc(50% - 2.25rem);
-    z-index: 0;
-  }
+  
 
-  .image-preview.js--no-default::after {
-    display: none;
-  }
+  
 
-  .animate {
-    -webkit-animation: ripple 0.4s linear;
-            animation: ripple 0.4s linear;
-  }
   
   
